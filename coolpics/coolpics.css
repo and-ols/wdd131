@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+  
+/*      Headlines: Mooli         the rest: Arial, Helvetica, sans-serif */
+
+
+header {
+   font-size: xx-large;
+   font-family: "Mooli";
+   text-align: center;
+}
+
+h2 {
+   font-family: "Mooli";
+   font-weight: 900;
+}
+
+main, footer {
+   font-family: "Arial", "Helvetica", "sans-serif";
+}
+
+main {
+   text-align: center;
+}
+
+img {
+   height: auto;
+   max-width: 100%;
+   object-fit: cover;
+}
+
+
+
+
+
+@media (min-width: 500px) {
+
+
+}
