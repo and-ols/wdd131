@@ -1,38 +1,114 @@
 @import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
   
-/*      Headlines: Mooli         the rest: Arial, Helvetica, sans-serif */
+/* Headlines: Mooli the rest: Arial, Helvetica, sans-serif */
+:root {
+   --primary-color: #52489c;
+   --secondary-color: #59c3c3;
+   --accent-color: #f45b69;
+   --text-dark: #333;
+   --text-light: #ebebeb;
+   --primary-font: Arial, Helvetica,sans-serif;
+   --secondary-font: Mooli, san-serif;
+}
 
+body {
+   background-color: rgb(236, 236, 236);
+}
+
+a:link, a:visited {
+   color: var(--text-light);
+}
 
 header {
-   font-size: xx-large;
-   font-family: "Mooli";
    text-align: center;
+   background-color: var(--primary-color);
+   color: var(--text-light);
+   padding: 1rem;
+}
+
+h1 {
+   font-size: 75px;
+   font-family: var(--secondary-font);
+}
+
+.navigation {
+   display: flex;
+   flex-direction: column;
+   font-size: 30px;
 }
 
 h2 {
-   font-family: "Mooli";
+   font-family: var(--secondary-font);
    font-weight: 900;
 }
 
 main, footer {
-   font-family: "Arial", "Helvetica", "sans-serif";
+   font-family: var(--primary-font);
 }
 
 main {
+   display: grid;
    text-align: center;
 }
 
 img {
-   height: auto;
    max-width: 100%;
+   height: 250px;
+   width: 250px;
    object-fit: cover;
+   border: .5rem solid white;
+   box-shadow: 8px 8px 5px rgb(77, 77, 77)
+}
+
+#menu {
+   border: none;
+   font-size: 40px;
+   background-color: var(--primary-color);
+   color: var(--text-light);
+}
+
+footer {
+   background-color: var(--primary-color);
+   color: var(--text-light);
+   padding: 1rem;
 }
 
 
+@media screen and (min-width: 700px) {
 
+   #menu {
+      display: none; 
+   }
 
+   .navigation {
+      flex-direction: row;
+   }
 
-@media (min-width: 500px) {
+   .navigation a {
+      flex: 1 1 100%;
+      padding: .5rem;
+      text-align: center;
+      justify-content: center;
+  }
 
+   .gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+   }
 
+   footer {
+      padding-left: 7rem;
+   }
+
+}
+
+@media screen and (min-width: 1000px) {
+
+   #menu {
+      display: none; 
+   }
+
+   .gallery {
+      grid-template-columns: 1fr 1fr 1fr;
+   }
 }
