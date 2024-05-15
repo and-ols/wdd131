@@ -37,6 +37,11 @@ h1 {
    font-size: 30px;
 }
 
+.close {
+   display: none;
+}
+
+
 h2 {
    font-family: var(--secondary-font);
    font-weight: 900;
