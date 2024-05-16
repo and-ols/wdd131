@@ -11,9 +11,17 @@ function handleResize() {
       navigation.classList.remove('close');
    }
    else {
-      navigation.classList.toggle('close');
+      navigation.classList.add('close');
    }
 }
 
 handleResize();
 window.addEventListener('resize', handleResize);
+
+function viewerTemplate(picture, altText) {
+   return `
+    <div class="viewer">
+    <button class="close-viewer">X</button>
+    <img src="${pic}" alt="${alt}">
+    </div>`
+}
