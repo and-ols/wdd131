@@ -95,6 +95,10 @@ main {
    font-size: large;
 }
 
+.close-pic {
+   display: none;
+}
+
 footer {
    background-color: var(--primary-color);
    color: var(--text-light);
