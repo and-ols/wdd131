@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+:root {
+   --green-color: #3a7a4d;
+   --brown-color: #805633;
+   --darker-blue-color: #335f70;
+
+   --body-font: Arial, Helvetica,sans-serif;
+   --headline-font: "Poetsen One", serif
+}
+
+header {
+   text-align: center;
+   color: var(--darker-blue-color);
+   font-size: x-large;
+}
+
+nav ul{
+   display: grid;
+   grid-template-columns: 100px 130px 100px;
+   list-style-type: none;
+   justify-content: end;
+   justify-items: end;
+   margin-right: 5rem;
+   font-size: x-large;
+}
+
+a:link, a:visited {
+   text-decoration: none;
+   color: var(--brown-color);
+}
+
+h2 {
+   color: var(--green-color);
+   font-size: xx-large;
+}
+
+main {
+   display: grid;
+}
+
+.info {
+   display: grid;
+}
