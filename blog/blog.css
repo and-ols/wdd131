@@ -11,8 +11,12 @@
 
 header {
    text-align: center;
+}
+
+h1 {
    color: var(--darker-blue-color);
-   font-size: x-large;
+   font-size: 50px;
+   font-family: var(--headline-font);
 }
 
 nav ul{
@@ -21,24 +25,39 @@ nav ul{
    list-style-type: none;
    justify-content: end;
    justify-items: end;
-   margin-right: 5rem;
-   font-size: x-large;
+   font-size: 25px;
+   border-top: var(--brown-color) solid 2px;
+   border-bottom: var(--brown-color) solid 2px;
+   padding: 20px 0px 20px 0px;
+   padding-right: 7rem;
 }
 
 a:link, a:visited {
    text-decoration: none;
-   color: var(--brown-color);
+   color: var(--green-color);
 }
 
 h2 {
    color: var(--green-color);
    font-size: xx-large;
+   font-family: var(--headline-font);
 }
 
 main {
    display: grid;
    grid-template-columns: 1fr 1fr 1fr;
-   margin: 0px 100px 0px 100px;
+   /* margin: 0px 100px 0px 100px; */
+   --body-font: Arial, Helvetica,sans-serif;
+}
+
+.skiptocontent {
+   position: absolute;
+   top: -40px;
+   background-color: violet;
+}
+
+.skiptocontent a:focus {
+   top: 0px;
 }
 
 .info {
@@ -53,6 +72,6 @@ main {
 
 .filters {
    grid-column: 3/3;
-   border: var(--brown-color) solid 2px;
+   /* border: var(--brown-color) solid 2px; */
    padding-top: 10px;
 }
