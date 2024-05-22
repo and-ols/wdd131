@@ -37,8 +37,22 @@ h2 {
 
 main {
    display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   margin: 0px 100px 0px 100px;
 }
 
 .info {
    display: grid;
+   grid-column: 1/2;
+}
+
+.book {
+   grid-column: 2/3;
+
+}
+
+.filters {
+   grid-column: 3/3;
+   border: var(--brown-color) solid 2px;
+   padding-top: 10px;
 }
