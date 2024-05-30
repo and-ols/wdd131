@@ -24,4 +24,15 @@ const articles = [
      genre: "Fantasy",
      stars: "⭐⭐⭐⭐"
    }
- ];
+];
+
+
+forEach((articles) => {
+
+  let date = document.createElement('p');
+  let ages = document.createElement('p');
+  let genre = document.createElement('p');
+  let stars = document.createElement('p');
+
+  
+});
