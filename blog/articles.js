@@ -28,6 +28,7 @@ const articles = [
 
 // Grabs the HTML class book
 const selectBook = document.querySelector('.book');
+const selectInfo = document.querySelector('.info');
 
 // The function to display the books
 const displayBooks = (articles) => {
@@ -35,9 +36,13 @@ const displayBooks = (articles) => {
   // Separates out each article, taking care of each book selection one at a time
   articles.forEach((article) => {
 
-    // Creates a section class and attaches the book class to it
+    // Creates a section  and attaches the book class to it
     let book = document.createElement('section');
     book.classList.add('book');
+
+    // Creates a section and attaches the info class to it
+    // let info = document.createElement('section');
+    // info.classList.add('info');
 
     // Creates the h2 for the title and adds the text from the article
     let title = document.createElement('h2');
@@ -46,10 +51,12 @@ const displayBooks = (articles) => {
     // Creates the p element for the date and adds the text from the article
     let date = document.createElement('p');
     date.textContent = `Date: ${article.date}`;
+    date.classList.add('info');
 
     // Creates the p element for the description and adds the text from the article
     let description = document.createElement('p');
     description.textContent = article.description;
+    description.classList.add('info');
 
     // Creates the img element, creates the src, alt, and adds the width and height
     let img = document.createElement('img');
@@ -61,26 +68,30 @@ const displayBooks = (articles) => {
     // Creates the p element for the ages and adds the text from the article
     let ages = document.createElement('p');
     ages.textContent = article.ages;
+    ages.classList.add('info');
 
     // Creates the p element for the genre and adds the text from the article
     let genre = document.createElement('p');
     genre.textContent = article.genre;
+    genre.classList.add('info');
 
     // Creates the p element for the stars and adds the text from the article
     let stars = document.createElement('p');
     stars.textContent = article.stars;
+    stars.classList.add('info');
 
     // Adds each element to the book section
     book.appendChild(title);
-    book.appendChild(date); 
-    book.appendChild(description);
+    book.appendChild(date);  //info.appendChild(date); 
+    book.appendChild(description); //info.appendChild(description);
     book.appendChild(img);
-    book.appendChild(ages);
-    book.appendChild(genre);
-    book.appendChild(stars);
+    book.appendChild(genre); //info.appendChild(genre);
+    book.appendChild(ages); //info.appendChild(ages);
+    book.appendChild(stars); //info.appendChild(stars);
   
     // Adds all the books into the container
     selectBook.appendChild(book);
+    selectBook.appendChild(title);
   });
 
 }
