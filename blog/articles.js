@@ -53,18 +53,6 @@ const displayBooks = (articles) => {
     date.textContent = `Date: ${article.date}`;
     date.classList.add('info');
 
-    // Creates the p element for the description and adds the text from the article
-    let description = document.createElement('p');
-    description.textContent = article.description;
-    description.classList.add('info');
-
-    // Creates the img element, creates the src, alt, and adds the width and height
-    let img = document.createElement('img');
-    img.setAttribute('src', article.imgSrc)
-    img.setAttribute('alt', `Book Cover for ${article.name}`);
-    img.setAttribute('width', 'auto');
-    img.setAttribute('height', 'auto');
-
     // Creates the p element for the ages and adds the text from the article
     let ages = document.createElement('p');
     ages.textContent = article.ages;
@@ -80,18 +68,32 @@ const displayBooks = (articles) => {
     stars.textContent = article.stars;
     stars.classList.add('info');
 
+    // Creates the img element, creates the src, alt, and adds the width and height
+    let img = document.createElement('img');
+    img.setAttribute('src', article.imgSrc)
+    img.setAttribute('alt', `Book Cover for ${article.name}`);
+    img.setAttribute('width', 'auto');
+    img.setAttribute('height', 'auto');
+
+    // Creates the p element for the description and adds the text from the article
+    let description = document.createElement('p');
+    description.textContent = article.description;
+    description.classList.add('info');
+
     // Adds each element to the book section
     book.appendChild(title);
     book.appendChild(date);  //info.appendChild(date); 
-    book.appendChild(description); //info.appendChild(description);
-    book.appendChild(img);
     book.appendChild(genre); //info.appendChild(genre);
     book.appendChild(ages); //info.appendChild(ages);
     book.appendChild(stars); //info.appendChild(stars);
+    book.appendChild(img);
+    book.appendChild(description); //info.appendChild(description);
+
   
     // Adds all the books into the container
-    selectBook.appendChild(book);
     selectBook.appendChild(title);
+    selectBook.appendChild(book);
+
   });
 
 }

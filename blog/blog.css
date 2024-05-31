@@ -69,6 +69,7 @@ main {
    text-align: right;
    margin-right: 2rem;
    line-height: .1rem;
+   background-color: aquamarine;
 }
 .date {
    font-size: large;
