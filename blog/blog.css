@@ -45,8 +45,6 @@ h2 {
 
 main {
    display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
-   /* margin: 0px 100px 0px 100px; */
    --body-font: Arial, Helvetica,sans-serif;
    /* Add some space in between the two articles- Since we restricted the width on the navbar
       last week (review that CSS rule if you need to) we should do the same to the main element 
@@ -63,26 +61,34 @@ main {
    top: 0px;
 }
 
-.info {
-   display: grid;
-   grid-column: 1/2;
-   text-align: right;
-   margin-right: 2rem;
-   line-height: .1rem;
-   background-color: aquamarine;
-}
-.date {
-   font-size: large;
+.books-section {
+   
 }
 
 .book {
+   display: grid;
+   padding-bottom: 2rem;
+}
+
+.info {
+   grid-column: 1/2;
+   text-align: right;
+   margin-right: 2rem;
+   line-height: .5rem;
+}
+#date {
+   font-size: large;
+}
+
+.content {
    grid-column: 2/3;
    border-left: solid 2px var(--brown-color);
    padding-left: 1rem;
    /* Adjust the top margin of the title of the post so that it lines up vertically 
       with the date on the left. */
 }
-.book img {
+.content img {
+   display: flex;
    text-align: center;
    align-items: center;
    justify-content: center;
@@ -90,8 +96,8 @@ main {
 
 .filters {
    grid-column: 3/3;
-   /* border: var(--brown-color) solid 2px; */
+   border: var(--brown-color) solid 2px;
    padding-top: 10px;
+   margin-left: 1rem;
 }
-
 
