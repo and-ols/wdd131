@@ -52,20 +52,19 @@ input {
    grid-column: 1/3;
    grid-row: 2/3;
 }
-#bottom {
-   grid-row: 3/4;
-}
+
 #under {
    display: flex;
 }
-#expiration {
-   display: grid;
-   grid-column: 3/4;
-}
 #cardHolder {
-   display: grid;
    grid-column: 1/3;
+   grid-row: 3/4;
 }
+#expiration {
+   grid-column: 3/4;
+   grid-row: 3/4;
+}
+
 
 /* Back of the card */
 .back {
