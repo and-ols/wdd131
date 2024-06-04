@@ -1,6 +1,6 @@
 // form-demo.js
 function validateForm(event) {
-   // get a reference to the form. Because we attached a submit event listener to the form itself, we can access the form either through 'event.target', or 'this'
+   // get a reference to the form. Because we attached a submit event listener to the form itself, we can access the form either through "event.target", or "this"
    const theForm = event.target;
    // the default behavior for a form submit is to try and navigate to another page where the form would be processed, if a url is not provided it will reload the current page. This sometimes is not desirable behavior. One case when we might do this is if we think there is bad data in the form.
    // To keep it from happening we can can call e.preventDefault()
@@ -23,26 +23,33 @@ function validateForm(event) {
  
  function togglePaymentDetails(e) {
    // get a reference to the form. We can access all the named form inputs through the form element.
-   const theForm = ;
+   const theForm = document.querySelector("#checkoutForm");
    // we will also need the creditCardContainer and paypalUsernameContainer
-   const creditCardContainer = ;
-   const paypalContainer = ;
+   const creditCardContainer = document.getElementById(
+      "creditCardNumberContainer"
+   );
+   const paypalContainer = document.getElementById("paypalUsernameContainer");
  
-   // Hide all containers by adding the '.hide' class to each of them
+   // Hide all containers by adding the ".hide" class to each of them
+   creditCardContainer.classList.add("hide");
+   paypalContainer.classList.add("hide");
  
    // Disable required for all fields...if we hide a required field the browser will throw an error when we try to submit!
- 
+   theForm.creditCardNumber.required = false;
+   theForm.paypalUsername.required = false;
  
    // Show the container based on the selected payment method, and add the required attribute back.
- 
- }
- 
- // helper function to display our errors.
- function showErrors(errors) {
-   const errorEl = document.querySelector(".errors");
-   const html = errors.map((error) => `<p>${error}</p>`);
-   errorEl.innerHTML = html.join("");
+   if (theForm.paymentMethod.value === "creditCard") {
+      creditCardContainer.classList.remove("hide");
+      theForm.creditCardNumber.required = true;
+   }
+   else if (theForm.paymentMethod.value === "payPal") {
+      paypalContainer.classList.remove("hide");
+      theForm.paypalUsername.required = true;
+   }
  }
  // attach a change event handler to the paymentMethod input
- 
+ document.querySelector("#paymentMethod")
+
  // attach a submit event handler to the form
+ document.addEventListener("change", togglePaymentDetails);
