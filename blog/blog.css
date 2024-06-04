@@ -6,7 +6,7 @@
    --darker-blue-color: #335f70;
 
    --body-font: Arial, Helvetica,sans-serif;
-   --headline-font: "Poetsen One", serif
+   --headline-font: "Poetsen One", serif;
 }
 
 header {
@@ -60,27 +60,28 @@ h2 {
    top: 0px;
 }
 
+.book-section {
+   grid-column: 3/4;
+}
+
 .book {
    display: grid;
    grid-template-columns: 1fr 1fr;
    padding-bottom: 25px;
    justify-content: center;
-   grid-column: 1/3;
+
 }
 
 .info {
    text-align: right;
    margin-right: 2rem;
    line-height: .5rem;
-   grid-column: 1/2;
 }
 #date {
    font-size: large;
 }
 
 .content {
-   display: grid;
-   grid-column: 2/3;
    border-left: solid 2px var(--brown-color);
    padding-left: 1rem;
 }
@@ -91,7 +92,6 @@ h2 {
 }
 
 .filters {
-   display: grid;
    grid-column: 3/4;
    border: var(--brown-color) solid 2px;
    padding-top: 10px;
