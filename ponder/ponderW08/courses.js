@@ -16,8 +16,25 @@ const aCourse = {
          enrolled: 28,
          days: 'TTh',
          instructor: 'Sis A'
+      },
+   ],
+   enrollStudent: function (sectionNum) {
+      const sectionIndex = this.sections.findIndex(
+         (section) =>section.sectionNum == sectionNum
+      );
+      if (sectionIndex >= 0) {
+         this.sections[sectionIndex].enrolled++;
+         outputSection(this.sections);
       }
-   ]
+   },
+   dropStudent: function (sectionNum) {
+      const sectionIndex = this.sections.findIndex(
+         (section) => section.sectionNum == sectionNum);
+      if (sectionIndex >= 0) {
+         this.sections[sectionIndex].enrolled--;
+         outputSection(this.sections);
+      }
+   }
 };
 
 function setNameNumber(course) {
@@ -42,6 +59,20 @@ function outputSection(sections) {
    );
    document.querySelector("#sections").innerHTML = html.join("");
 }
+
+document.querySelector("#enrollStudent").addEventListener("click", function() {
+   const sectionNum = document.querySelector("#sectionNumber").value;
+   aCourse.enrollStudent(sectionNum);
+});
+document.querySelector("#dropStudent").addEventListener("click", function() {
+   const sectionNum = document.querySelector("#sectionNumber").value;
+   aCourse.dropStudent(sectionNum);
+});
+
+
+
+
+
 
 setNameNumber(aCourse);
 outputSection(aCourse.sections);
