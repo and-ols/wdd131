@@ -1,11 +1,12 @@
 import {participantTemplate, successTemplate} from "./Templates.js";
 
-document.addEventListener("click", function () {
+document.addEventListener("DOMContentLoaded", function () {
    let participant = 1;
 
    const addButton = document.getElementById("add");
    addButton.addEventListener("click", function () {
        participant++;
+       
        const template = participantTemplate(participant);
        addButton.insertAdjacentHTML("beforebegin", template);
    });
@@ -26,19 +27,11 @@ document.addEventListener("click", function () {
    function totalFees() {
     // the selector below lets us grab any element that has an id that begins with "fee"
        let feeElements = document.querySelectorAll("[id^=fee]");
-       console.log(feeElements);
        feeElements = [...feeElements];
-
-
-
-        // fix this!
-       const feeTotal = feeElements.reduce();
-
-
-
-
-
-
+       let feeTotal = 0;
+       feeElements.forEach(feeElement => {
+            feeTotal += parseFloat(feeElement.value || 0);
+       });
        return feeTotal.toFixed(2); 
    }
 
