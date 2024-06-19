@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+
+:root {
+   --primary-color: #00817b;
+   --secondary-color: #00833b;
+   --text-dark: #333;
+   --text-light: #ebebeb;
+   --primary-font: Arial, Helvetica,sans-serif;
+   --secondary-font: "Kalam";
+}
+
+img {
+   max-width: 100%;
+   height: auto;
+}
+
+header {
+   font-family: var(--secondary-font);
+}
+
+header img {
+   width: 30%;
+}
+
+
+.recipe-section {
+   border: grey 3px solid;
+   border-radius: 1rem;
+   padding: 1.5rem 1.5rem 3rem 1.5rem;
+   display: flex;
+   flex-direction: column;
+   
+}
+
+.tag {
+   border: grey 3px solid;
+   font-size: x-large;
+   font-weight: bold;
+   align-self: left;
+   padding: 5px;
+   font-family: var(--primary-font);
+}
+
+.name {
+   font-family: var(--secondary-font);
+   color: var(--primary-color);
+   font-size: xx-large;
+}
+
+#hidden {
+   display: none;
+}
+
+
+@media screen and (min-width: 800px) {
+
+   .recipe-section {
+      display: grid;
+      grid-template-columns: 400px 1fr;
+   }
+
+   .tag ,.name, .rating, .description {
+      grid-column: 2/3;
+   } 
+
+}
+
+
+
+
