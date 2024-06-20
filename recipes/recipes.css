@@ -95,7 +95,6 @@ footer {
 footer .social img {
    height: 60px;
    width: auto;
-
 }
 
 footer a {
@@ -132,10 +131,20 @@ footer a {
    }
 
    footer {
-      display: flex;
-      flex-direction: row-reverse;
+      display: grid;
       margin: 0rem 3rem;
       align-items: center;
+   }
+
+   .social {
+      justify-self: right;
+      grid-column: 3;
+      grid-row: 1;
+   }
+
+   #credit {
+      justify-self: left;
+      grid-row: 1;
    }
 
 }
