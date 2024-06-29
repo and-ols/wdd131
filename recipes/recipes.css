@@ -67,12 +67,15 @@ hr {
    margin-bottom: 1rem;
 }
 
-.tag {
+li {
+   list-style: none;
    border: grey 3px solid;
    font-size: x-large;
    font-weight: bold;
    align-self: left;
-   max-width: 95px;
+   max-width: 120px;
+   text-align: center;
+   padding: .5rem;
 }
 
 .name {
