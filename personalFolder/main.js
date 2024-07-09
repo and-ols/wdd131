@@ -12,13 +12,13 @@ function getRandomList(list) {
 
 function activityTemplate(activity) {
 	return `<section class="activity">
-				<ul>${activity.name}
-					<li>Difficulty: ${activity.difficulty}</li>
-					<li>Activity: ${activity.type}</li>
-					<li>Distance: ${activity.distance}</li>
-					<li>Location: ${activity.location}</li>
-					<li>Other Info: ${activity.otherInfo}</li>
-					<li>Source: ${activity.source}</li>
+				<ul><strong>${activity.name}</strong>
+					<li> <strong>Difficulty:</strong> ${activity.difficulty}</li>
+					<li><strong>Activity:</strong> ${activity.type}</li>
+					<li><strong>Distance:</strong> ${activity.distance}</li>
+					<li><strong>Location:</strong> ${activity.location}</li>
+					<li><strong>Other Info:</strong> ${activity.otherInfo}</li>
+					<li><strong>Source:</strong> ${activity.source}</li>
 				</ul>
 			</section>
         `;
