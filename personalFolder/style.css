@@ -8,7 +8,6 @@
    --tan: #DDC9B4;
 
    --heading-font: "Yanone Kaffeesatz", serif;
-   --paragraph-font: "IBM Plex Sans", Helvetica, sans-serif;
 }
 
 
@@ -133,7 +132,6 @@ header h1 {
 #shortDescription {
    padding: 0rem 1rem;
    line-height: 1.5rem;
-   font-family: var(--paragraph-font);
 }
 
 .galleryImg img {
