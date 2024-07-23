@@ -32,7 +32,7 @@ header {
 header img {
    justify-self: center;
    width: 200px;
-   height: auto;
+   height: 200px;
 }
 
 /* All of the navigation bars */
@@ -81,7 +81,7 @@ footer img {
    padding-left: .5rem;
    justify-self: left;
    width: 150px;
-   height: auto;
+   height: 150px;
 }
 /* Covers the content of the footer (contact info) */
 .footer-content {
@@ -215,8 +215,6 @@ button {
    /* Logo in the header on each page */
    header img {
       justify-self: center;
-      width: 100%;
-      height: auto;
    }
 
    /* All of the navigation bars */
