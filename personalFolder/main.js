@@ -42,8 +42,6 @@ function init() {
     search.addEventListener('submit', searchHandler);
 }
 
-init();
-
 function filter(query) {
     const filter = activities.filter(activity => {
         const lowerCaseQuery = query.toLowerCase();
@@ -64,3 +62,5 @@ function searchHandler(e) {
     const filteredActivity = filter(search);
     renderActivities(filteredActivity);
 }
+
+init();
