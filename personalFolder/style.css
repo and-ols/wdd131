@@ -1,8 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&family=Yanone+Kaffeesatz:wght@700&display=swap');
+
+
 :root {
    --red-brown: #CB8152;
    --teal: #5FABA7;
    --blue: #279FF5;
    --tan: #DDC9B4;
+
+   --heading-font: "Yanone Kaffeesatz", serif;
+   --paragraph-font: "IBM Plex Sans", Helvetica, sans-serif;
 }
 
 
@@ -19,6 +25,8 @@ header {
    text-align: center;
    align-items: center;
    background-color: var(--red-brown);
+   font-family: var(--heading-font);
+   font-size: x-large;
 }
 /* Logo in the header on each page */
 header img {
@@ -35,15 +43,17 @@ header img {
    align-items: center;
    background-color: var(--teal);
    padding: .5rem;
-   font-size: x-large;
    margin-bottom: 1rem;
    border: #a85218 double 3px;
+   font-family: var(--heading-font);
+
 }
 /* Styling for each individual item of the navigation */
 .navigation a {
    flex: 1 1 100%;
    padding: .5rem;
    justify-content: center;
+   font-size: xx-large;
 
 }
 /* Navigation menu items hover */
@@ -63,6 +73,7 @@ footer {
    display: grid;
    align-items: center;
    background-color: var(--red-brown);
+   font-family: var(--paragraph-font);
 }
 /* Styling for the logo in the footer */
 footer img {
@@ -122,10 +133,11 @@ header h1 {
 #shortDescription {
    padding: 0rem 1rem;
    line-height: 1.5rem;
+   font-family: var(--paragraph-font);
 }
 
 .galleryImg img {
-   max-height: 300px;
+   max-height: 200px;
    width: auto;
    padding-top: .5rem;
    border-radius: .5rem;
@@ -151,11 +163,13 @@ header h1 {
 /* ---------- FIND ACTIVITY ---------- */
 #activityMain h3 {
    text-align: center;
-   font-size: x-large;
+   font-size: xx-large;
+   font-family: var(--heading-font);
 }
 
 #intro {
    text-align: center;
+   font-family: var(--paragraph-font);
 }
 
 .search-bar {
@@ -186,6 +200,7 @@ button {
    border: 10px groove var(--blue);
    line-height: 1.5rem;
    padding-right: 1rem;
+   font-family: var(--paragraph-font);
 }
 
 
