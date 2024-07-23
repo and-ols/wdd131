@@ -139,6 +139,7 @@ header h1 {
    border: 5px double var(--teal);
    border-radius: .5rem;
    max-width: 600px;
+   height: auto;
    margin: .5rem;
 }
 
