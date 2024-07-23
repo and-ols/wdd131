@@ -137,7 +137,7 @@ header h1 {
 }
 
 .galleryImg img {
-   max-height: 200px;
+  height: 200px;
    width: auto;
    padding-top: .5rem;
    border-radius: .5rem;
@@ -204,7 +204,7 @@ button {
 }
 
 
-@media (min-width: 800px) {
+@media (min-width: 500px) {
    /* All headers on each page */
    header {
       display: grid;
@@ -261,7 +261,7 @@ button {
    }
    
    .galleryImg img {
-      max-height: 300px;
+      height: 300px;
       width: auto;
       border-radius: .5rem;
    }
