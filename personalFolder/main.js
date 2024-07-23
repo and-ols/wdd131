@@ -45,11 +45,21 @@ function init() {
 function filter(query) {
     const filter = activities.filter(activity => {
         const lowerCaseQuery = query.toLowerCase();
-        return (
-            activity.name.toLowerCase().includes(lowerCaseQuery) ||
-            activity.description.toLowerCase().includes(lowerCaseQuery) ||
-            (activity.difficulty && activity.difficulty.some(tag => tag.toLowerCase().includes(lowerCaseQuery)))
-        );
+
+        if (lowerCaseQuery == "")
+        {
+            alert("Please enter a difficulty level");
+        }
+        else {
+            return (
+                activity.name.toLowerCase().includes(lowerCaseQuery) ||
+                activity.description.toLowerCase().includes(lowerCaseQuery) ||
+                (activity.difficulty && activity.difficulty.some(tag => tag.toLowerCase().includes(lowerCaseQuery)))
+            );
+        }
+
+
+        
     });
 
     const sorted = filter.sort((a, b) => a.name.localeCompare(b.name));
